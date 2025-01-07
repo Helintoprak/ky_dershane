@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğretmen Ekranı</title>
+    <link rel="stylesheet" href="../css/ogretmen-ekrani.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <img src="../images/logo.png" alt="Logo" class="logo" onclick="window.location.href='/ogretmen-ekrani'">
+        <ul>
+            <li><a href="/ogretmen-ekrani">Anasayfa</a></li>
+            <li><a href="/etutler">Etütler</a></li>
+        </ul>
+        <button class="logout-btn" onclick="window.location.href='/login'">Çıkış Yap</button>
+    </div>
+
+    <main>
+        <div class="content">
+            <h1>Öğretmen Paneli</h1>
+            
+            <!-- Şube Seçimi -->
+            <label for="sube-sec">Şube Seçin:</label>
+            <select id="sube-sec">
+                <option value="">Şube Seçin</option>
+            </select>
+        
+            <!-- Deneme Seçimi -->
+            <label for="deneme-sec">Deneme Sınavı Seçin:</label>
+            <select id="deneme-sec">
+                <option value="">Deneme Sınavı Seçin</option>
+            </select>
+        
+            <!-- Filtrele Butonu -->
+            <button id="filtrele-btn" onclick="filtreleVeriler()">Filtrele</button>
+        
+            <!-- Grafik -->
+            <canvas id="netGrafik"></canvas>
+        </div>
+        
+    </main>
+
+    <script src="../js/ogretmen-ekrani.js"></script>
+</body>
+</html>
