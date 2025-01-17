@@ -1,0 +1,129 @@
+/* Genel Stil */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Sidebar Stil */
+.sidebar {
+    width: 250px;
+    background-color: #7cb4ef;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: fixed;
+}
+
+/* Logo Stil */
+.sidebar .logo {
+    width: 120px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+/* Menü Butonları */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #588fd2;
+}
+
+/* Çıkış Yap Butonu */
+.sidebar .logout-btn {
+    margin-top: auto;
+    margin-bottom: 100px;
+    background-color: #588fd2;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 80%;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar .logout-btn:hover {
+    background-color: #a71d2a;
+}
+
+/* Etütler sayfası stil */
+main {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Etüt Talepleri Tablosu */
+#etutTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#etutTable th,
+#etutTable td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#etutTable th {
+    background-color: #7cb4ef;
+    color: white;
+}
+
+#etutTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Etüt Talepleri Tablosu */
+#etutTable td button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.onayla-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.onayla-btn:hover {
+    background-color: #45a049;
+}
+
+.reddet-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.reddet-btn:hover {
+    background-color: #e53935;
+}

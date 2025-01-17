@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etüt Talep</title>
+    <link rel="stylesheet" href="../css/etut-talep.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="../images/logo.png" alt="Logo" class="logo" onclick="window.location.href='/ogrenci-ekrani'">
+        <ul>
+            <li><a href="/ogrenci-ekrani">Anasayfa</a></li>
+            <li><a href="/etut-talep" class="active">Etüt Talep</a></li>
+            <li><a href="/odeme-takip">Ödeme Takip</a></li>
+        </ul>
+        <button class="logout-btn" onclick="window.location.href='/login'">Çıkış Yap</button>
+    </div>
+
+    <main>
+        <div class="main-content">
+            <h1>Etüt Talep</h1>
+
+            <!-- Ders ve Öğretmen Seçimi -->
+            <div class="dropdown-container">
+                <label for="dersSelect">Ders:</label>
+                <select id="dersSelect">
+                    <option value="">Ders Seçin</option>
+                </select>
+
+                <label for="ogretmenSelect">Öğretmen:</label>
+                <select id="ogretmenSelect">
+                    <option value="">Öğretmen Seçin</option>
+                </select>
+            </div>
+
+            <!-- Tarih ve Saat Seçimi -->
+            <div class="time-container">
+                <label for="etutTarihi">Tarih:</label>
+                <input type="date" id="etutTarihi">
+
+                <label for="etutSaati">Saat:</label>
+                <input type="time" id="etutSaati">
+            </div>
+
+            <button id="etutTalepBtn">Etüt Talep Et</button>
+
+            <!-- Geçmiş ve Gelecek Etüt Talepleri -->
+            <h2>Geçmiş ve Gelecek Etüt Talepleri</h2>
+            <table id="gecmisEtutlerTablosu">
+                <thead>
+                    <tr>
+                        <th>Ders</th>
+                        <th>Öğretmen</th>
+                        <th>Talep Tarihi</th>
+                        <th>Etüt Tarihi</th>
+                        <th>Durum</th>
+                        <th>Açıklama</th>
+                    </tr>
+                </thead>
+                <tbody id="gecmisEtutlerBody">
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="../js/etutTalep.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğretmen Girişi</title>
+    <link rel="stylesheet" href="../css/ogretmen-giris.css">
+</head>
+
+<body>
+    <div class="login-form">
+        <img src="../images/logo.png" alt="KY Dershane Logo">
+        <h2>Öğretmen Girişi</h2>
+
+        <!-- Giriş Formu -->
+        <form id="ogretmenGirisForm">
+            <input type="text" id="ad" placeholder="Ad" required>
+            <input type="text" id="soyad" placeholder="Soyad" required>
+            <input type="password" id="sifre" placeholder="Şifre" required>
+            <button type="submit">Giriş Yap</button>
+        </form>
+
+        <!-- Hata Mesajı -->
+        <p id="hataMesaji" style="color: red; display: none;">Geçersiz giriş bilgileri. Lütfen tekrar deneyin!</p>
+    </div>
+
+    <script>
+        document.getElementById('ogretmenGirisForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Form bilgilerini al
+            const ad = document.getElementById('ad').value;
+            const soyad = document.getElementById('soyad').value;
+            const sifre = document.getElementById('sifre').value;
+
+            fetch('/ogretmen/ogrt-giris', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ ad, soyad, sifre })
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        document.getElementById('hataMesaji').style.display = 'block';
+                        throw new Error('Geçersiz giriş bilgileri!');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const ogretmen = data[0];
+                    localStorage.setItem('hocaId', ogretmen.hoca_id); 
+                    window.location.href = '/ogretmen-ekrani';
+                })
+                .catch(error => {
+                    console.error('Giriş hatası:', error);
+                });
+        });
+    </script>
+</body>
+
+</html>

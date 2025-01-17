@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenci Ekranı</title>
+    <link rel="stylesheet" href="../css/ogrenci-ekrani.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="../images/logo.png" alt="Logo" class="logo" onclick="window.location.href='/ogrenci-ekrani'">
+        <ul>
+            <li><a href="/ogrenci-ekrani">Anasayfa</a></li>
+            <li><a href="/etut-talep">Etüt Talep</a></li>
+            <li><a href="/odeme-takip">Ödeme Takip</a></li>
+        </ul>
+        <button class="logout-btn" onclick="window.location.href='/login'">Çıkış Yap</button>
+    </div>
+
+    <main>
+        <div class="main-content">
+            <!-- Deneme Netleri Grafik -->
+            <div class="chart-container netler-container">
+                <h1>Deneme Netleri</h1>
+                <canvas id="netChart1"></canvas>
+            </div>
+
+            <!-- Ders Bazlı Netler Grafik -->
+            <div class="chart-container ders-bazli-container">
+                <h1>Ders Bazlı Netler</h1>
+                <div class="dropdown-container">
+                    <select id="denemeSelect"></select>
+                    <button id="filtreleBtn">Filtrele</button>
+                </div>
+                <canvas id="netChart2"></canvas>
+            </div>
+
+            <!-- Ders Çizgi Grafiği -->
+            <div class="chart-container ders-cizgi-container">
+                <h1>Ders Çizgi Grafiği</h1>
+                <div class="dropdown-container">
+                    <select id="dersSelect"></select>
+                    <button id="dersFiltreleBtn">Filtrele</button>
+                </div>
+                <canvas id="netChart3"></canvas>
+            </div>
+        </div>
+
+        <!-- Ders Doğru Yanlış Tablosu -->
+        <div class="table-container">
+            <h2>Ders Doğru Yanlış Tablosu</h2>
+            <div class="dropdown-container">
+                <select id="dersTableSelect"></select>
+                <button id="tabloFiltreleBtn">Filtrele</button>
+            </div>
+            <table id="dogruYanlisTablosu">
+                <thead>
+                    <tr>
+                        <th>Konu</th>
+                        <th>Doğru</th>
+                        <th>Yanlış</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>   
+
+    <script src="../js/ogrenci-ekrani.js"></script>
+</body>
+</html>

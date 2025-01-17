@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/yonetici-ekrani.css">
+    <title>Yönetici Paneli</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="../images/logo.png" alt="Logo" class="logo" onclick="window.location.href='/yonetici-ekrani'">
+        <ul>
+            <li><a href="/yonetici-ekrani">Anasayfa</a></li>
+            <li><a href="/ekleme">Ekleme</a></li>
+        </ul>
+        <button class="logout-btn" onclick="window.location.href='/login'">Çıkış Yap</button>
+    </div>
+
+    <main>
+        <div class="content">
+            <h1>Yönetici Paneli</h1>
+
+            <!-- Şube Seçimi -->
+            <label for="sube-sec">Şube Seçin:</label>
+            <select id="sube-sec" onchange="getOdemeler()">
+                <option value="">Şube Seçin</option>
+            </select>
+
+            <!-- Ödeme Tablosu -->
+            <table id="odemeTablosu">
+                <thead>
+                    <tr>
+                        <th>Öğrenci Adı</th>
+                        <th>Ödeme Miktarı</th>
+                        <th>Ödeme Durumu</th>
+                        <th>Ödeme Tarihi</th>
+                        <th>İşlem</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+
+        </div>
+    </main>
+
+    <script src="../js/yonetici-ekrani.js"></script>
+</body>
+
+</html>

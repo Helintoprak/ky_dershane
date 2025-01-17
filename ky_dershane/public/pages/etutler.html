@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etüt Talepleri</title>
+    <link rel="stylesheet" href="../css/etutler.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="../images/logo.png" alt="Logo" class="logo" onclick="window.location.href='/ogretmen-ekrani'">
+        <ul>
+            <li><a href="/ogretmen-ekrani">Anasayfa</a></li>
+            <li><a href="/etutler">Etütler</a></li>
+        </ul>
+        <button class="logout-btn" onclick="window.location.href='/login'">Çıkış Yap</button>
+    </div>
+
+    <main>
+        <h1>Etüt Talepleriniz</h1>
+        <table id="etutTable">
+            <thead>
+                <tr>
+                    <th>Öğrenci Adı</th>
+                    <th>Etüt Talep Tarihi</th>
+                    <th>Etüt Tarihi</th>
+                    <th>Durum</th>
+                    <th>Açıklama</th>
+                    <th>İşlem</th> 
+                </tr>
+            </thead>
+            <tbody id="etutTableBody">
+            </tbody>
+        </table>
+    </main>
+
+    <script src="../js/etutler.js"></script>
+</body>
+
+</html>

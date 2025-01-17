@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödeme Takip</title>
+    <link rel="stylesheet" href="../css/odemeler.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="../images/logo.png" alt="Logo" class="logo" onclick="window.location.href='/ogrenci-ekrani'">
+        <ul>
+            <li><a href="/ogrenci-ekrani">Anasayfa</a></li>
+            <li><a href="/etut-talep">Etüt Talep</a></li>
+            <li><a href="/odeme-takip" class="active">Ödeme Takip</a></li>
+        </ul>
+        <button class="logout-btn" onclick="window.location.href='/login'">Çıkış Yap</button>
+    </div>
+    <main>
+        <div class="main-content">
+            <h1>Ödeme Takip</h1>
+
+            <!-- Ödemeler Tablosu -->
+            <h2>Geçmiş ve Gelecek Ödemeler</h2>
+            <table id="odemelerTablosu">
+                <thead>
+                    <tr>
+                        <th>Ödeme Tarihi</th>
+                        <th>Ödeme Miktarı (₺)</th>
+                        <th>Durum</th>
+                    </tr>
+                </thead>
+                <tbody id="odemelerBody">
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="../js/odemeler.js"></script>
+</body>
+</html>

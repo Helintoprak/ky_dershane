@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenci Girişi</title>
+    <link rel="stylesheet" href="../css/ogrenci-giris.css">
+</head>
+<body>
+    <div class="login-form">
+        <img src="../images/logo.png" alt="KY Dershane Logo">
+        <h2>Öğrenci Girişi</h2>
+        <form onsubmit="girisYap(event)">
+            <input type="text" id="ad" placeholder="Ad" required>
+            <input type="text" id="soyad" placeholder="Soyad" required>
+            <input type="password" id="sifre" placeholder="Şifre" required>
+            <button type="submit">Giriş Yap</button>
+        </form>
+    </div>
+    <script>
+        function girisYap(event) {
+            event.preventDefault();
+            
+            const ad = document.getElementById('ad').value;
+            const soyad = document.getElementById('soyad').value;
+            const sifre = document.getElementById('sifre').value;
+    
+            localStorage.setItem('ogrenciAd', ad);
+            localStorage.setItem('ogrenciSoyad', soyad);
+            localStorage.setItem('ogrenciSifre', sifre);
+    
+            window.location.href = '/ogrenci-ekrani';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/arkaplan.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Giriş formu tasarımı */
+.login-form {
+    width: 320px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 50px;
+}
+
+/* Logo */
+.login-form img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+/* Başlık */
+.login-form h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Input alanları */
+.login-form input {
+    width: 90%; /* Formun genişliğine göre ayarladık */
+    padding: 12px;
+    margin: 8px auto; /* Ortalamak için */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block; /* Ortalamayı etkinleştirmek için */
+    text-align: center; /* Yazıyı ortalamak için */
+}
+
+/* Giriş butonu */
+.login-form button {
+    width: 90%;
+    padding: 12px;
+    background-color: #004085;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px auto;
+    display: block;
+}
+
+/* Hover efekti */
+.login-form button:hover {
+    background-color: #00306a;
+}

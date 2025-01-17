@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ekleme.css">
+    <title>Ekleme</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="../images/logo.png" alt="Logo" class="logo" onclick="window.location.href='/yonetici-ekrani'">
+        <ul>
+            <li><a href="/yonetici-ekrani">Anasayfa</a></li>
+            <li><a href="/ekleme">Ekleme</a></li>
+        </ul>
+        <button class="logout-btn" onclick="window.location.href='/login'">Çıkış Yap</button>
+    </div>
+
+    <main>
+        <div class="forms-container">
+            <!-- Öğrenci Ekleme Formu -->
+            <div class="form-container">
+                <h2>Öğrenci Ekle</h2>
+                <form id="ogrenci-form">
+                    <label for="ogrenci-ad">Ad:</label>
+                    <input type="text" id="ogrenci-ad" name="ogrenci-ad" required><br>
+                    <label for="ogrenci-soyad">Soyad:</label>
+                    <input type="text" id="ogrenci-soyad" name="ogrenci-soyad" required><br>
+                    <label for="ogrenci-sifre">Şifre:</label>
+                    <input type="password" id="ogrenci-sifre" name="ogrenci-sifre" required><br>
+                    <button type="submit">Öğrenci Ekle</button>
+                </form>
+            </div>
+
+            <!-- Öğretmen Ekleme Formu -->
+            <div class="form-container">
+                <h2>Öğretmen Ekle</h2>
+                <form id="ogretmen-form">
+                    <label for="ogretmen-ad">Ad:</label>
+                    <input type="text" id="ogretmen-ad" name="ogretmen-ad" required><br>
+                    <label for="ogretmen-soyad">Soyad:</label>
+                    <input type="text" id="ogretmen-soyad" name="ogretmen-soyad" required><br>
+                    <label for="ogretmen-sifre">Şifre:</label>
+                    <input type="password" id="ogretmen-sifre" name="ogretmen-sifre" required><br>
+                    <label for="ogretmen-ders">Ders Seç:</label>
+                    <select id="ogretmen-ders" name="ogretmen-ders" required>
+                    </select><br>
+                    <button type="submit">Öğretmen Ekle</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/ekleme.js"></script>
+</body>
+
+</html>

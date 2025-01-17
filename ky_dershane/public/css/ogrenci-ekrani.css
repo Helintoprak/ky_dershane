@@ -1,0 +1,245 @@
+/* Genel Stil */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Sidebar Stil */
+.sidebar {
+    width: 250px;
+    background-color: #7cb4ef;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: fixed;
+}
+
+/* Logo Stil */
+.sidebar .logo {
+    width: 120px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+/* Menü Butonları */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #588fd2;
+}
+
+/* Çıkış Yap Butonu */
+.sidebar .logout-btn {
+    margin-top: auto;
+    margin-bottom: 100px;
+    background-color: #588fd2;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 80%;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar .logout-btn:hover {
+    background-color: #a71d2a;
+}
+
+/* Ana İçerik */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 10px;
+    width: 97%;
+}
+
+/* Grafik Kutuları */
+.netler-container,
+.ders-bazli-container,
+.ders-cizgi-container {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Grafikler */
+#netChart1,
+#netChart2,
+#netChart3 {
+    width: 100% !important;
+    height: 200px !important;
+}
+
+
+
+#denemeSelect,
+#dersSelect {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+#filtreleBtn,
+#dersFiltreleBtn {
+    background-color: #588fd2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#filtreleBtn:hover,
+#dersFiltreleBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1200px) {
+    .netler-container,
+    .ders-bazli-container,
+    .ders-cizgi-container {
+        width: 48%;
+        margin: 10px auto;
+    }
+}
+
+/* Tablo Konteyneri */
+.table-container {
+    width: 90%;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Tablo Başlığı */
+.table-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Dropdown ve Filtreleme Butonu */
+.table-container .dropdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#dersTableSelect {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+
+
+#TabloFiltreleBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Tablo Stili */
+#dogruYanlisTablosu {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#dogruYanlisTablosu th,
+#dogruYanlisTablosu td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+#dogruYanlisTablosu th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+#dogruYanlisTablosu tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .table-container {
+        width: 95%;
+    }
+}
+main{
+    margin-left: 250px;
+}
+
+#tabloFiltreleBtn{
+    background-color: #588fd2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#denemeSonucTablosu {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#denemeSonucTablosu th,
+#denemeSonucTablosu td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+#denemeSonucTablosu th {
+    background-color: #f4f4f4;
+}
+
+#denemeSonucTablosu tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

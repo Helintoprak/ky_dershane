@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğretmen Ekranı</title>
+    <link rel="stylesheet" href="../css/ogretmen-ekrani.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="../images/logo.png" alt="Logo" class="logo" onclick="window.location.href='/ogretmen-ekrani'">
+        <ul>
+            <li><a href="/ogretmen-ekrani">Anasayfa</a></li>
+            <li><a href="/etutler">Etütler</a></li>
+        </ul>
+        <button class="logout-btn" onclick="window.location.href='/login'">Çıkış Yap</button>
+    </div>
+
+    <main>
+        <div class="content">
+            <h1>Öğretmen Paneli</h1>
+
+            <div class="select-button-container">
+                <!-- Şube Seçimi -->
+                <div class="select-container">
+                    <label for="sube-sec">Şube Seçin:</label>
+                    <select id="sube-sec" onchange="getDenemeler()">
+                        <option value="">Şube Seçin</option>
+                    </select>
+                </div>
+
+                <!-- Deneme Seçimi -->
+                <div class="select-container">
+                    <label for="deneme-sec">Deneme Sınavı Seçin:</label>
+                    <select id="deneme-sec">
+                        <option value="">Deneme Sınavı Seçin</option>
+                    </select>
+                </div>
+
+                <!-- Filtrele Butonu -->
+                <div class="button-container">
+                    <button id="filtrele-btn" onclick="filtreleVeriler()">Filtrele</button>
+                </div>
+            </div>
+
+            <!-- Grafik ve Tablo Yan Yana -->
+            <div class="graph-table-container">
+                <canvas id="netGrafik"></canvas>
+                <table id="netTablo">
+                    <thead>
+                        <tr>
+                            <th>Konu</th>
+                            <th>Toplam Doğru</th>
+                            <th>Toplam Yanlış</th>
+                            <th>Toplam Net</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="../js/ogretmen-ekrani.js"></script>
+</body>
+
+</html>
